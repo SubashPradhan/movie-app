@@ -32,7 +32,7 @@
 import axios from "axios";
 
 export default {
-  name: "LatestMovie",
+  // name: "LatestMovie",
   data() {
     return {
       wholeResponse: [],
@@ -42,7 +42,7 @@ export default {
   mounted() {
     axios
       .get(
-        "http://www.omdbapi.com/?s=horror&apikey=d03e9c79&page=1&type=movie&Content-Type=application/json"
+        "http://www.omdbapi.com/?s=animation&apikey=d03e9c79&page=1&type=movie&Content-Type=application/json"
       )
       .then(response => {
         this.wholeResponse = response.data.Search;
