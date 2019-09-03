@@ -5,6 +5,7 @@
       <v-progress-circular indeterminate :size="150" :width="8" color="green"></v-progress-circular>
     </div>
   </v-container>
+  
   <v-container v-else grid-list-xl>
     <v-layout wrap>
       <v-flex xs4 v-for="(item, index) in wholeResponse" :key="index" mb-2>
