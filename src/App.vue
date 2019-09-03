@@ -1,16 +1,16 @@
 <template>
 <div id="app">
+  <router-view></router-view>
+  <!-- <LatestMovie /> -->
 </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
 import LatestMovie from './components/LatestMovie'
 
 export default {
   name: 'App',
   components: {
-    LatestMovie,
   },
   data: () => ({
     //
