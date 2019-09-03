@@ -6,7 +6,7 @@ import Movie from '@/components/Movie'
 Vue.use(VueRouter)
 
 export default new VueRouter({
-  mode: 'history',
+  mode: 'history',                //removes # from url
   routes:[
     {
       path: '/',

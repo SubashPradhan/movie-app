@@ -50,6 +50,11 @@ export default {
       .catch(error => {
         console.log(error);
       });
+  },
+  methods : {
+    singleMovie (id){
+      this.$router.push('/movie/' + id)
+    }
   }
 };
 </script>
