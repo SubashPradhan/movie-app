@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './plugins/vuetify';
+import vuetify from './plugins/vuetify'
 import router from './router'
 
+Vue.use(vuetify)
 Vue.config.productionTip = false
 
 new Vue({
-  // vuetify,
+  vuetify,
+  // components : {App, 'LatestMovie': LatestMovie},
   render: h => h(App),
   router
 }).$mount('#app')

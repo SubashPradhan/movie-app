@@ -1,21 +1,18 @@
 <template>
   <v-container v-if="loading">
-    <v-layout row-wrap>
-      <v-flex xs-12>
-        <h2>Your movie: {{singleMovie}}</h2>
-      </v-flex>
-    </v-layout>
+    <div class="text-xs-center">
+      <v-progress-circular indeterminate :size="150" :width="8" color="blue"></v-progress-circular>
+    </div>
   </v-container>
 
   <v-container v-else grid-list-xl>
     <v-layout wrap>
       <v-card>
-        <v-img :src="singleMovie.Poster" aspect-ratio="1"></v-img>
+        <v-img :src="singleMovie.Poster" aspect-ratio="2.5" contain></v-img>
         <v-card-title primary-title class="justify-center">
-          <div>
-            <h2>{{this.singleMovie.Title}}</h2>
-            <div>Year: {{this.singleMovie.Year}}</div>
-            <div>Type: {{singleMovie.Type}}</div>
+          <div class="description">
+            <h3>{{singleMovie.Title}}</h3>
+            <div>Year: {{singleMovie.Year}}</div>
             <div>Rated: {{singleMovie.Rated}}</div>
             <div>IMDB-Rating: {{singleMovie.imdbRating}}</div>
             <div>Actors: {{singleMovie.Actors}}</div>
@@ -23,7 +20,7 @@
           </div>
         </v-card-title>
         <v-card-actions class="justify-center">
-          <v-btn flat color="green" @click="ratings">Rating</v-btn>
+          <v-btn color="blue" @click="back">Back to Homepage</v-btn>
         </v-card-actions>
       </v-card>
     </v-layout>
@@ -36,7 +33,8 @@ export default {
   props: ["id"],
   data() {
     return {
-      singleMovie: ""
+      singleMovie: "",
+      loading: true
     };
   },
   mounted() {
@@ -46,11 +44,28 @@ export default {
       )
       .then(response => {
         this.singleMovie = response.data;
-        console.log("SingleMovie", this.movie);
+        this.loading = false;
+        console.log("SingleMovie", this.singleMovie);
       })
       .catch(error => {
         console.log(error);
       });
+  },
+  methods: {
+    back() {
+      this.$router.push("/");
+    }
   }
 };
 </script>
+
+<style lang='stylus' scoped>
+.v-progress-circular {
+  margin: 1rem;
+}
+
+.description {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+}
+</style>

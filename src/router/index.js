@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LatestMovie from '@/components/LatestMovie'
 import Movie from '@/components/Movie'
+import vuetify from '@/plugins/vuetify' // check
 
+Vue.use(vuetify) //check
 Vue.use(VueRouter)
 
 export default new VueRouter({
