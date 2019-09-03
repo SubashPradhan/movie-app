@@ -1,5 +1,6 @@
 
 <template>
+<!-- <v-content> -->
   <v-container v-if="loading">
     <div class="text-xs-center">
       <v-progress-circular indeterminate :size="150" :width="8" color="green"></v-progress-circular>
@@ -26,13 +27,14 @@
       </v-flex>
     </v-layout>
   </v-container>
+<!-- </v-content> -->
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-  // name: "LatestMovie",
+  name: "LatestMovie",
   data() {
     return {
       wholeResponse: [],
