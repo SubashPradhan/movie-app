@@ -1,16 +1,17 @@
 <template>
 <div id="app">
+  <v-content>
   <router-view></router-view>
-  <!-- <LatestMovie /> -->
+  </v-content>
 </div>
 </template>
 
 <script>
-import LatestMovie from './components/LatestMovie'
 
 export default {
   name: 'App',
   components: {
+    
   },
   data: () => ({
     //
