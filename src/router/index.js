@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LatestMovie from '@/components/LatestMovie'
 import Movie from '@/components/Movie'
-import vuetify from '@/plugins/vuetify' // check
+import vuetify from '@/plugins/vuetify'         // check
+import SearchMovie from '@/components/SearchMovie'
 
 Vue.use(vuetify) //check
 Vue.use(VueRouter)
@@ -21,5 +22,11 @@ export default new VueRouter({
     props: true,     // Passing props 
     component: Movie
   },
+  {
+    path: '/movie-search/:searchText',
+    name: 'SearchMovie',
+    component : SearchMovie,
+    props: true
+  }
 ]
 })
