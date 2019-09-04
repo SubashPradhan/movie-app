@@ -16,7 +16,7 @@
            />
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-      <v-btn icon>
+      <v-btn icon @click="searchMovie">
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
     </v-toolbar>
@@ -67,6 +67,10 @@ export default {
   methods: {
     singleMovie(id) {
       this.$router.push("/movie/" + id);
+    },
+
+    searchMovie() {
+      this.$router.push("/movie-search/")
     }
   }
 };
