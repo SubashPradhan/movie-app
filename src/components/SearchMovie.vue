@@ -9,7 +9,7 @@
     <h2>Your Movies</h2>
     <v-layout wrap>
       <v-flex xs3 v-for="(selectedMovie, index) in searchMovie" :key="index" mt-10 ml-12>
-        <v-card>
+        <v-card class="col">
           <v-img :src="selectedMovie.Poster" alt="item.Title" aspect-ratio="1" />
           <v-card-title primary-title hover>
             <h4>{{selectedMovie.Title}}</h4>

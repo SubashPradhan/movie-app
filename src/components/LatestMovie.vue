@@ -23,7 +23,7 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
       <div id="reel">
-        <img src="../image/reel.svg" />
+        <img src="../image/reel.svg" alt='reel-img'/>
       </div>
     </v-toolbar>
     
@@ -34,9 +34,9 @@
     <h2>Movie Magic</h2>
     </transition>
     
-    <v-layout wrap>
+    <v-layout wrap class="row">
       <v-flex xs3 v-for="(item, index) in wholeResponse" :key="index" mt-10 ml-12>
-        <v-card>
+        <v-card class="col">
           <v-img :src="item.Poster" alt="item.Title" aspect-ratio="1" />
           <v-card-title primary-title hover>
             <h4>{{item.Title}}</h4>
@@ -170,4 +170,5 @@ h2 {
     transform: scale(1);
   }
 }
+
 </style>
