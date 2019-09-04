@@ -8,7 +8,7 @@
 
   <v-container v-else grid-list-xl class="container">
     <v-toolbar dark>
-      <v-toolbar-title class="width">
+      <v-toolbar-title class="width" app>
         <v-text-field
           text
           label="Search"
@@ -18,7 +18,7 @@
           required
         />
       </v-toolbar-title>
-      <div class="flex-grow-1"></div>
+      <!-- <div class="flex-grow-1"></div> -->
       <v-btn icon @click="searchMovie">
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
@@ -26,8 +26,14 @@
         <img src="../image/reel.svg" />
       </div>
     </v-toolbar>
+    
+    <transition 
+    appear
+    name="bounce"
+    >
     <h2>Movie Magic</h2>
-
+    </transition>
+    
     <v-layout wrap>
       <v-flex xs3 v-for="(item, index) in wholeResponse" :key="index" mt-10 ml-12>
         <v-card>
@@ -105,7 +111,6 @@ export default {
 
 .movie-text, h4 {
   text-align: center;
-  height: align-self auto;
   font-family: 'Anton', sans-serif;
 }
 
@@ -118,7 +123,7 @@ export default {
   height: 50px;
   width: 50px;
   -webkit-animation: rotation 2s infinite linear;
-  margin: 60px;
+  margin-left: 100px;
 }
 
 @keyframes rotation {
@@ -138,13 +143,31 @@ export default {
   background-attachment: fixed;
   background-position: center;
 }
-h2{
+
+h2 {
   color: red;
   text-align: center;
   font-family: 'Kaushan Script', cursive;
   font-size: 40px;
 }
+
 .footer {
   justify-content: center;
+}
+
+.bounce-enter-active {
+  animation: bounce-in .9s;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
