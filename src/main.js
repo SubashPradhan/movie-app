@@ -8,7 +8,6 @@ Vue.config.productionTip = false
 
 new Vue({
   vuetify,
-  // components : {App, 'LatestMovie': LatestMovie},
   render: h => h(App),
   router
 }).$mount('#app')

@@ -40,7 +40,7 @@ export default {
   mounted() {
     axios
       .get(
-        `http://www.omdbapi.com/?apikey=d03e9c79&i=${this.id}&Content-Type=application/json`
+        `https://www.omdbapi.com/?apikey=d03e9c79&i=${this.id}&Content-Type=application/json`
       )
       .then(response => {
         this.singleMovie = response.data;
