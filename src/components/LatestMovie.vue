@@ -11,8 +11,11 @@
       <v-app-bar-nav-icon />
       <v-toolbar-title>
         <v-text-field
+          autofocus="true"
           text
           label="Search"
+          placeholder="Search movie with Title"
+          v-model="searchText"
            />
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
@@ -48,7 +51,8 @@ export default {
   data() {
     return {
       wholeResponse: [],
-      loading: true
+      loading: true,
+      searchText: ''
     };
   },
   mounted() {
@@ -66,11 +70,12 @@ export default {
   },
   methods: {
     singleMovie(id) {
-      this.$router.push("/movie/" + id);
+      this.$router.push("/movie/" + id)
     },
 
     searchMovie() {
-      this.$router.push("/movie-search/")
+      this.$router.push("/movie-search/"+ this.searchText)
+      this.searchText = ''
     }
   }
 };

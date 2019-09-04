@@ -23,7 +23,7 @@ export default new VueRouter({
     component: Movie
   },
   {
-    path: '/movie-search/',
+    path: '/movie-search/:searchText',
     name: 'SearchMovie',
     component : SearchMovie,
     props: true
