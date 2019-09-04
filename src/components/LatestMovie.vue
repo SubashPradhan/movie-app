@@ -78,7 +78,7 @@ export default {
   mounted() {
     axios
       .get(
-        "http://www.omdbapi.com/?s=animation&apikey=d03e9c79&page=1&type=movie&Content-Type=application/json"
+        "https://www.omdbapi.com/?s=animation&apikey=d03e9c79&page=1&type=movie&Content-Type=application/json"
       )
       .then(response => {
         this.wholeResponse = response.data.Search;
