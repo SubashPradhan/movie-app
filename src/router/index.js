@@ -10,23 +10,23 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
   mode: 'history',                //removes # from url
-  routes:[
+  routes: [
     {
       path: '/',
       name: 'LatestMovie',
       component: LatestMovie
-  },
-  {
-    path: '/movie/:id',
-    name: 'Movie',
-    props: true,     // Passing props 
-    component: Movie
-  },
-  {
-    path: '/movie-search/:searchText',
-    name: 'SearchMovie',
-    component : SearchMovie,
-    props: true
-  }
-]
+    },
+    {
+      path: '/movie/:id',
+      name: 'Movie',
+      props: true,     // Passing props 
+      component: Movie
+    },
+    {
+      path: '/movie-search/:searchText',
+      name: 'SearchMovie',
+      component: SearchMovie,
+      props: true
+    }
+  ]
 })
