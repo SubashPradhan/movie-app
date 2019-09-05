@@ -24,6 +24,14 @@
         </v-card-title>
       </v-card>
     </v-layout>
+
+    <v-footer class="text-center footer" app dark>
+      <strong>
+        Subash Pradhan
+        {{ new Date().getFullYear() }}
+        @Codaisseur 🤙
+      </strong>
+    </v-footer>
   </v-container>
 </template>
 
@@ -91,5 +99,8 @@ h3{
   background: url('../image/movie.jpg');
   background-position: center;
   background-size: cover;
+}
+.footer {
+  justify-content: center;
 }
 </style>
