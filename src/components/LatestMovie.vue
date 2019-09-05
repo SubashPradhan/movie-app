@@ -18,12 +18,13 @@
           required
         />
       </v-toolbar-title>
-      <!-- <div class="flex-grow-1"></div> -->
+
       <v-btn icon @click="searchMovie">
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
+
       <div>
-        <img src="../image/reel2.png" alt="reel-img" id="reel"/>
+        <img src="../image/reel2.png" alt="reel-img" id="reel" />
       </div>
     </v-toolbar>
 
@@ -39,6 +40,7 @@
           <v-card-title primary-title hover>
             <h4>{{item.Title}}</h4>
           </v-card-title>
+
           <div class="movie-text">
             <div>Year: {{item.Year}}</div>
             <div>Type: {{item.Type}}</div>
@@ -50,6 +52,7 @@
         </v-card>
       </v-flex>
     </v-layout>
+
     <v-footer class="text-center footer" app dark>
       <strong>
         Subash Pradhan
@@ -118,15 +121,15 @@ export default {
   min-width: auto;
 }
 
-.button:hover{
-  color black;
-  transition 0.6s ease-in-out;
-  transform scale(1.2, 1.2)
+.button:hover {
+  color: black;
+  transition: 0.8s ease-in-out;
+  transform: scale(1.1, 1.1);
   cursor: pointer;
 }
 
 #reel {
-  min-width:auto;
+  min-width: auto;
   min-height: auto;
   height: 75px;
   width: 75px;

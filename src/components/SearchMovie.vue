@@ -100,7 +100,7 @@ h2 {
   font-size: 40px;
 }
 
-.button:hover{
+.button:hover {
   color: black;
   transition: 0.6s ease-in-out;
   transform: scale(1.2, 1.2);
@@ -110,7 +110,7 @@ h2 {
 .movie-text,
 h4 {
   text-align: center;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 
 .footer {

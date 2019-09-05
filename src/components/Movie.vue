@@ -15,11 +15,12 @@
           <div class="description col">
             <v-img :src="singleMovie.Poster" aspect-ratio="2.5" contain class="moviePoster col"></v-img>
             <h3>{{singleMovie.Title}}</h3>
-            <div>Year: {{singleMovie.Year}}</div>
-            <div>Rated: {{singleMovie.Rated}}</div>
-            <div>IMDB-Rating: {{singleMovie.imdbRating}}</div>
             <div>Actors: {{singleMovie.Actors}}</div>
-            <!-- <div>Description: {{singleMovie.Plot}}</div> -->
+            <div>Released: {{singleMovie.Released}}</div>
+            <div>Language: {{singleMovie.Language}}</div>
+            <div>IMDB-Rating: {{singleMovie.imdbRating}}</div>
+            <div>Runtime: {{singleMovie.Runtime}}</div>
+            <div>Rated: {{singleMovie.Rated}}</div>
           </div>
         </v-card-title>
       </v-card>
@@ -71,8 +72,11 @@ export default {
 .v-progress-circular {
   margin: 1rem;
 }
-h3{
-  margin-top 30px;
+
+h3 {
+  margin: 30px;
+  text-decoration: underline;
+  color: white;
 }
 
 .description {
@@ -87,19 +91,20 @@ h3{
   height: auto;
 }
 
-.back-button:hover{
-  color green;
-  transition 0.6s ease-in-out;
-  transform scale(1.5 )
+.back-button:hover {
+  color: green;
+  transition: 0.6s ease-in-out;
+  transform: scale(1.5);
   cursor: pointer;
 }
 
 .container {
-  padding 20px
+  padding: 20px;
   background: url('../image/movie.jpg');
   background-position: center;
   background-size: cover;
 }
+
 .footer {
   justify-content: center;
 }
