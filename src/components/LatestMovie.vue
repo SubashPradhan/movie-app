@@ -11,7 +11,7 @@
       <v-toolbar-title class="width" app>
         <v-text-field
           text
-          label="Search"
+          al
           placeholder="Search Your Favourite Movie"
           v-model="searchText"
           :rules="searchRules"
@@ -22,22 +22,20 @@
       <v-btn icon @click="searchMovie">
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
-      <div id="reel">
-        <img src="../image/reel.svg" alt='reel-img'/>
+      <div>
+        <img src="../image/reel2.png" alt="reel-img" id="reel"/>
       </div>
     </v-toolbar>
-    
-    <transition 
-    appear
-    name="bounce"
-    >
-    <h2>Movie Magic</h2>
+
+    <transition appear name="bounce">
+      <h2>Movie Magic</h2>
     </transition>
-    
+
     <v-layout wrap class="row">
       <v-flex xs3 v-for="(item, index) in wholeResponse" :key="index" mt-10 ml-12>
-        <v-card class="col">
+        <v-card class="col button">
           <v-img :src="item.Poster" alt="item.Title" aspect-ratio="1" />
+
           <v-card-title primary-title hover>
             <h4>{{item.Title}}</h4>
           </v-card-title>
@@ -45,8 +43,9 @@
             <div>Year: {{item.Year}}</div>
             <div>Type: {{item.Type}}</div>
           </div>
+
           <v-card-actions class="justify-center">
-            <v-btn color="blue" @click="singleMovie(item.imdbID)">Details</v-btn>
+            <v-btn color="blue" @click="singleMovie(item.imdbID)" dark>Details</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -55,7 +54,7 @@
       <strong>
         Subash Pradhan
         {{ new Date().getFullYear() }}
-        @Codaisseur
+        @Codaisseur 🤙
       </strong>
     </v-footer>
   </v-container>
@@ -111,7 +110,7 @@ export default {
 
 .movie-text, h4 {
   text-align: center;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Courgette', cursive;
 }
 
 .width {
@@ -119,11 +118,20 @@ export default {
   min-width: auto;
 }
 
+.button:hover{
+  color black;
+  transition 0.6s ease-in-out;
+  transform scale(1.2, 1.2)
+  cursor: pointer;
+}
+
 #reel {
-  height: 50px;
-  width: 50px;
+  min-width:auto;
+  min-height: auto;
+  height: 75px;
+  width: 75px;
   -webkit-animation: rotation 2s infinite linear;
-  margin-left: 100px;
+  margin-left: 130px;
 }
 
 @keyframes rotation {
@@ -156,19 +164,20 @@ h2 {
 }
 
 .bounce-enter-active {
-  animation: bounce-in .9s;
+  animation: bounce-in 0.9s;
 }
 
 @keyframes bounce-in {
   0% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(2);
   }
+
   100% {
     transform: scale(1);
   }
 }
-
 </style>

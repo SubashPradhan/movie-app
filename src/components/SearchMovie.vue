@@ -9,7 +9,7 @@
     <h2>Your Movies</h2>
     <v-layout wrap>
       <v-flex xs3 v-for="(selectedMovie, index) in searchMovie" :key="index" mt-10 ml-12>
-        <v-card class="col">
+        <v-card class="col button">
           <v-img :src="selectedMovie.Poster" alt="item.Title" aspect-ratio="1" />
           <v-card-title primary-title hover>
             <h4>{{selectedMovie.Title}}</h4>
@@ -19,21 +19,21 @@
             <div>Type: {{selectedMovie.Type}}</div>
           </div>
           <v-card-actions class="justify-center">
-            <v-btn color="blue" @click="singleMovie(selectedMovie.imdbID)">Details</v-btn>
+            <v-btn color="blue" @click="singleMovie(selectedMovie.imdbID)" dark>Details</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
 
     <v-card-actions class="justify-center">
-      <v-btn color="red" @click="back">Movie magic</v-btn>
+      <v-btn color="red" @click="back" class="button" dark>Movie magic</v-btn>
     </v-card-actions>
 
     <v-footer class="text-center footer" app dark>
       <strong>
         Subash Pradhan
         {{ new Date().getFullYear() }}
-        @Codaisseur
+        @Codaisseur 🤙
       </strong>
     </v-footer>
   </v-container>
@@ -100,10 +100,17 @@ h2 {
   font-size: 40px;
 }
 
+.button:hover{
+  color: black;
+  transition: 0.6s ease-in-out;
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+}
+
 .movie-text,
 h4 {
   text-align: center;
-  font-family: "Anton", sans-serif;
+  font-family: 'Courgette', cursive;
 }
 
 .footer {
