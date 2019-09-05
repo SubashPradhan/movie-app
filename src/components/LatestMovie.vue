@@ -33,7 +33,7 @@
 
     <v-layout wrap class="row">
       <v-flex xs3 v-for="(item, index) in wholeResponse" :key="index" mt-10 ml-12>
-        <v-card class="col">
+        <v-card class="col button">
           <v-img :src="item.Poster" alt="item.Title" aspect-ratio="1" />
 
           <v-card-title primary-title hover>
@@ -45,7 +45,7 @@
           </div>
 
           <v-card-actions class="justify-center">
-            <v-btn color="blue" @click="singleMovie(item.imdbID)">Details</v-btn>
+            <v-btn color="blue" @click="singleMovie(item.imdbID)" dark>Details</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -116,6 +116,13 @@ export default {
 .width {
   width: 800px;
   min-width: auto;
+}
+
+.button:hover{
+  color black;
+  transition 0.6s ease-in-out;
+  transform scale(1.2, 1.2)
+  cursor: pointer;
 }
 
 #reel {
