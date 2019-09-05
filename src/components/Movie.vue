@@ -7,21 +7,21 @@
 
   <v-container v-else grid-list-xl>
     <v-layout wrap>
-      <v-card>
-        <v-img :src="singleMovie.Poster" aspect-ratio="2.5" contain></v-img>
-        <v-card-title primary-title class="justify-center">
-          <div class="description">
+      <v-card class="container justify-center">
+        <v-card-actions class="justify-center">
+          <v-btn color="red" @click="back">Movie Magic</v-btn>
+        </v-card-actions>
+        <v-card-title primary-title>
+          <div class="description col">
+            <v-img :src="singleMovie.Poster" aspect-ratio="2.5 " contain class="moviePoster col"></v-img>
             <h3>{{singleMovie.Title}}</h3>
             <div>Year: {{singleMovie.Year}}</div>
             <div>Rated: {{singleMovie.Rated}}</div>
             <div>IMDB-Rating: {{singleMovie.imdbRating}}</div>
             <div>Actors: {{singleMovie.Actors}}</div>
-            <div>Description: {{singleMovie.Plot}}</div>
+            <!-- <div>Description: {{singleMovie.Plot}}</div> -->
           </div>
         </v-card-title>
-        <v-card-actions class="justify-center">
-          <v-btn color="blue" @click="back">Back to Homepage</v-btn>
-        </v-card-actions>
       </v-card>
     </v-layout>
   </v-container>
@@ -65,7 +65,21 @@ export default {
 }
 
 .description {
-  text-align: center;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Courgette', cursive;
+  text-align: right;
+  float: right;
+  color: yellow;
+}
+
+.moviePoster {
+  margin-left: 450px;
+  height: auto;
+}
+
+.container {
+  padding 20px
+  background: url('../image/movie.jpg');
+  background-position: center;
+  background-size: cover;
 }
 </style>
