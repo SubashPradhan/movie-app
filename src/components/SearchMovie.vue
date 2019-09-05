@@ -33,7 +33,7 @@
       <strong>
         Subash Pradhan
         {{ new Date().getFullYear() }}
-        @Codaisseur
+        @Codaisseur 🤙
       </strong>
     </v-footer>
   </v-container>
@@ -103,7 +103,7 @@ h2 {
 .movie-text,
 h4 {
   text-align: center;
-  font-family: "Anton", sans-serif;
+  font-family: 'Courgette', cursive;
 }
 
 .footer {
