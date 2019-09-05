@@ -7,13 +7,13 @@
 
   <v-container v-else grid-list-xl>
     <v-layout wrap>
-      <v-card class="container justify-center">
+      <v-card class="container">
         <v-card-actions class="justify-center">
-          <v-btn color="red" @click="back">Movie Magic</v-btn>
+          <v-btn color="red" @click="back" class="back-button" dark>Movie Magic</v-btn>
         </v-card-actions>
         <v-card-title primary-title>
           <div class="description col">
-            <v-img :src="singleMovie.Poster" aspect-ratio="2.5 " contain class="moviePoster col"></v-img>
+            <v-img :src="singleMovie.Poster" aspect-ratio="2.5" contain class="moviePoster col"></v-img>
             <h3>{{singleMovie.Title}}</h3>
             <div>Year: {{singleMovie.Year}}</div>
             <div>Rated: {{singleMovie.Rated}}</div>
@@ -63,6 +63,9 @@ export default {
 .v-progress-circular {
   margin: 1rem;
 }
+h3{
+  margin-top 30px;
+}
 
 .description {
   font-family: 'Courgette', cursive;
@@ -74,6 +77,13 @@ export default {
 .moviePoster {
   margin-left: 450px;
   height: auto;
+}
+
+.back-button:hover{
+  color green;
+  transition 0.6s ease-in-out;
+  transform scale(1.5 )
+  cursor: pointer;
 }
 
 .container {
