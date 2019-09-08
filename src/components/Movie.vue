@@ -7,8 +7,7 @@
 
   <v-container v-else grid-list-xl>
     <v-layout wrap>
-      <v-flex>
-        <v-card class="container col mx-auto">
+        <v-card class="container">
           <v-card-actions class="justify-center">
             <v-btn color="red" @click="back" class="back-button" dark>Movie Magic</v-btn>
           </v-card-actions>
@@ -23,10 +22,10 @@
             <div>Runtime: {{singleMovie.Runtime}}</div>
             <div>Rated: {{singleMovie.Rated}}</div>
           </div>
-          
+
         </v-card>
-      </v-flex>
     </v-layout>
+
     <v-footer class="text-center footer" app dark>
       <strong>
         Subash Pradhan
@@ -34,6 +33,7 @@
         @Codaisseur 🤙
       </strong>
     </v-footer>
+
   </v-container>
 </template>
 
@@ -115,8 +115,8 @@ h3 {
   .container {
     background: none;
     background-color: #a88c3d;
-    justify-content: center;
-    padding: 0px;
+  background-size: contain;
+  background-attachment: none;
   }
 
   .moviePoster {
