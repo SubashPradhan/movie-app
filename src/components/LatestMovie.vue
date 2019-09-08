@@ -33,8 +33,8 @@
     </transition>
 
     <v-layout wrap class="row">
-      <v-flex xs3 v-for="(item, index) in wholeResponse" :key="index" mt-10 ml-12>
-        <v-card class="col button">
+      <v-flex v-for="(item, index) in wholeResponse" :key="index" mt-10 >
+        <v-card class="col button mx-auto"  max-width="350">
           <v-img :src="item.Poster" alt="item.Title" aspect-ratio="1" />
 
           <v-card-title primary-title hover>
@@ -111,13 +111,14 @@ export default {
   margin: 1rem;
 }
 
-.movie-text, h4 {
+.movie-text,
+ h4 {
   text-align: center;
   font-family: 'Courgette', cursive;
 }
 
 .width {
-  width: 800px;
+  width: 100%;
   min-width: auto;
 }
 
@@ -134,7 +135,6 @@ export default {
   height: 75px;
   width: 75px;
   -webkit-animation: rotation 2s infinite linear;
-  margin-left: 130px;
 }
 
 @keyframes rotation {

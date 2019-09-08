@@ -7,11 +7,12 @@
 
   <v-container v-else grid-list-xl>
     <v-layout wrap>
-      <v-card class="container">
-        <v-card-actions class="justify-center">
-          <v-btn color="red" @click="back" class="back-button" dark>Movie Magic</v-btn>
-        </v-card-actions>
-        <v-card-title primary-title>
+      <v-flex>
+        <v-card class="container col mx-auto">
+          <v-card-actions class="justify-center">
+            <v-btn color="red" @click="back" class="back-button" dark>Movie Magic</v-btn>
+          </v-card-actions>
+
           <div class="description col">
             <v-img :src="singleMovie.Poster" aspect-ratio="2.5" contain class="moviePoster col"></v-img>
             <h3>{{singleMovie.Title}}</h3>
@@ -22,10 +23,10 @@
             <div>Runtime: {{singleMovie.Runtime}}</div>
             <div>Rated: {{singleMovie.Rated}}</div>
           </div>
-        </v-card-title>
-      </v-card>
+          
+        </v-card>
+      </v-flex>
     </v-layout>
-
     <v-footer class="text-center footer" app dark>
       <strong>
         Subash Pradhan
@@ -103,9 +104,28 @@ h3 {
   background: url('../image/movie.jpg');
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .footer {
   justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    background: none;
+    background-color: #a88c3d;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  .moviePoster {
+    margin-left: 0;
+  }
+
+  .description {
+    text-align: center;
+    color: black;
+  }
 }
 </style>

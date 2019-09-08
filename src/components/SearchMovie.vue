@@ -7,9 +7,9 @@
 
   <v-container v-else grid-list-xl>
     <h2>Your Movies</h2>
-    <v-layout wrap>
-      <v-flex xs3 v-for="(selectedMovie, index) in searchMovie" :key="index" mt-10 ml-12>
-        <v-card class="col button">
+    <v-layout wrap class="row">
+      <v-flex v-for="(selectedMovie, index) in searchMovie" :key="index" mt-10>
+        <v-card class="col button mx-auto" max-width="320" min-width="320">
           <v-img :src="selectedMovie.Poster" alt="item.Title" aspect-ratio="1" />
           <v-card-title primary-title hover>
             <h4>{{selectedMovie.Title}}</h4>
@@ -97,7 +97,7 @@ h2 {
   color: red;
   text-align: center;
   font-family: "Kaushan Script", cursive;
-  font-size: 40px;
+  font-size: 40px;  
 }
 
 .button:hover {
