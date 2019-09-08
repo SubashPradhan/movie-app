@@ -104,7 +104,6 @@ h3 {
   background: url('../image/movie.jpg');
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .footer {
