@@ -1,7 +1,7 @@
 # movie-app
 A Search Movie app made for two days Hackathon Challenge.<br>
 
-![] (movie.gif)
+![] (movie-app.gif)
 
 ## Project setup
 ```
