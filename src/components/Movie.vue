@@ -55,7 +55,7 @@ export default {
       .then(response => {
         this.singleMovie = response.data;
         this.loading = false;
-        console.log("SingleMovie", this.singleMovie);
+
       })
       .catch(error => {
         console.log(error);
@@ -94,7 +94,7 @@ h3 {
 
 .back-button:hover {
   color: green;
-  transition: 0.6s ease-in-out;
+  transition: 0.9s ease-in-out;
   transform: scale(1.5);
   cursor: pointer;
 }

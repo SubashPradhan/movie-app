@@ -9,7 +9,13 @@
     <h2>Your Movies</h2>
     <v-layout wrap class="row">
       <v-flex v-for="(selectedMovie, index) in searchMovie" :key="index" mt-10>
-        <v-card class="col button mx-auto" max-width="320" min-width="320">
+        <v-card
+          class="col button mx-auto"
+          max-width="320"
+          min-width="320"
+          min-height="500"
+          @click="singleMovie(selectedMovie.imdbID)"
+        >
           <v-img :src="selectedMovie.Poster" alt="item.Title" aspect-ratio="1" />
           <v-card-title primary-title hover>
             <h4>{{selectedMovie.Title}}</h4>
@@ -18,9 +24,6 @@
             <div>Year: {{selectedMovie.Year}}</div>
             <div>Type: {{selectedMovie.Type}}</div>
           </div>
-          <v-card-actions class="justify-center">
-            <v-btn color="blue" @click="singleMovie(selectedMovie.imdbID)" dark>Details</v-btn>
-          </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
@@ -97,13 +100,13 @@ h2 {
   color: red;
   text-align: center;
   font-family: "Kaushan Script", cursive;
-  font-size: 40px;  
+  font-size: 40px;
 }
 
 .button:hover {
   color: black;
   transition: 0.6s ease-in-out;
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
   cursor: pointer;
 }
 

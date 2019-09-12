@@ -15,6 +15,7 @@
           placeholder="Search Your Favourite Movie"
           v-model="searchText"
           :rules="searchRules"
+          v-on:keyup.enter='searchMovie'
           required
         />
       </v-toolbar-title>
@@ -34,7 +35,12 @@
 
     <v-layout wrap class="row">
       <v-flex v-for="(item, index) in wholeResponse" :key="index" mt-10 >
-        <v-card class="col button mx-auto"  max-width="350">
+        <v-card 
+        class="col button mx-auto" 
+        max-width="320" 
+        min-width="320" 
+        min-height="500"
+        @click="singleMovie(item.imdbID)">
           <v-img :src="item.Poster" alt="item.Title" aspect-ratio="1" />
 
           <v-card-title primary-title hover>
@@ -46,9 +52,6 @@
             <div>Type: {{item.Type}}</div>
           </div>
 
-          <v-card-actions class="justify-center">
-            <v-btn color="blue" @click="singleMovie(item.imdbID)" dark>Details</v-btn>
-          </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
