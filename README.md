@@ -28,4 +28,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Acknowledgments
 
-Special thanks to Codaisserur for hosting hackathon. 
+Special thanks to Codaisseur for hosting hackathon. 
